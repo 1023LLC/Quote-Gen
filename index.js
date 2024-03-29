@@ -23,6 +23,10 @@ const quoteElement = document.getElementById('quote')
 
 
 function generateQuote(){
+    if (usedIndexes.size >= quotes.length){
+        usedIndexes.clear()
+    }
+
     while (true){
         const randomIdx = Math.floor(Math.random() * quotes.length)
 
